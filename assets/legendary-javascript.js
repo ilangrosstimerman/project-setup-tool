@@ -11,7 +11,14 @@ let authorizeOptions = {
   error: function() {
     console.log('Failed authentication');
   }
-}, authString, user = {};
+}, authString, user = {}, submitButton = document.querySelector("#button-1643251037187"), trelloAuthButton = document.querySelector('#trello-auth-btn');
+let nameField = document.querySelector('#text-1643251049905'),
+     phoneField = document.querySelector('#text-1643251062289'),
+     emailField = document.querySelector('#text-1643251064078'),
+     messageField = document.querySelector('#text-1643251065818'),
+     dateField = document.querySelector("#date-1643251044760"),
+     form = document.querySelector("#form-container");
+
 //authorization and authentication
 class AuthorizeApp{
   // verifies that the key and token are correct, as well as stored for simpler REST API calls.
@@ -52,17 +59,19 @@ class RequestUrlHandler{
     return this.urlString;
   }
 }
-const loginButton = document.querySelector('#button-1643251037187');
 //when the login button is clicked, wait for trello key/token verification
 //and return the variable containing the string needed to successfully fetch API requests.
-loginButton.addEventListener('click', async() => {
-  if (Trello.token !== undefined && Trello.token() !== null) {
-    await new AuthorizeApp(authorizeOptions);
-    authString = new RequestUrlHandler(user.key, user.token).string;
-    console.log(authString);
-  }
-    return authString;
-});
+function saveFormValues() {
+  let formFields = {
+    name: nameField,
+    phone: phoneField,
+    email: emailField,
+    user_message: messageField,
+    date: dateField
+  };
+  return localStorage.setItem("form_values", JSON.stringify(formFields));
+}
+submitButton.addEventListener('click', saveFormValues);
   //POST template
 
 var myList = '61f1d40a93852c1b9f88152a';
