@@ -1,9 +1,11 @@
+//declare form fields to get values from. 
 let dateField = document.querySelector("#date-1643251044760");
 let nameField = document.querySelector("#text-1643251049905");
 let phoneField = document.querySelector("#text-1643251062289");
 let emailField = document.querySelector("#text-1643251064078");
 let messageField = document.querySelector("#text-1643251065818");
 let submit = document.querySelector("#button-1643251037187");
+//declare parameters for trello signin when the page loads.
 let  o = {
      type: 'popup',
      name: 'Getting Started Application',
@@ -18,6 +20,7 @@ let  o = {
           console.log('Failed authentication');
      }
 }
+//create the card object to get posted on "submit"
 let newCard = {
      name: "",
      desc: "",
@@ -25,7 +28,9 @@ let newCard = {
      idList: '61f7164aea56070edecb617e',
      keepFromSource: 'all'
 }
-Trello.authorize(authorizeOptions);
+//prompt trello signin when page loads. Won't prompt if trello_token is present in localstorage.
+Trello.authorize(o);
+//when submit button is clicked, add form field values to the card getting sent to the "request meeting" list on trello. 
 submit.addEventListener('click', async() => {
 newCard.name = nameField.value + " requested a meeting on " + dateField.value;
 newCard.desc = nameField.value + " included the message: "+ messageField.value + ". Contact them at: "+phoneField.value+ " or "+emailField.value;
