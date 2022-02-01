@@ -23,9 +23,11 @@ label{
     text-align: center;
 }
 .form-fieldset-container{
-    display: block;
-    border-style: none;
     justify-content: center;
+    background-color: lightgray;
+    width: 30%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    border: 5px grey solid;
 }
-
-
