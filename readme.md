@@ -14,11 +14,11 @@ Simply add the contact information and a small message about your meeting into t
 ## Authors
 
 
-*Ilan Timerman
-*Jeremy Anderson
-*Nicholas Tatom
-*Brandon Peterson
-*Chelsie Mahoney
+* Ilan Timerman  
+* Jeremy Anderson  
+* Nicholas Tatom  
+* Brandon Peterson  
+* Chelsie Mahoney  
 
 
 ## Acknowledgments
