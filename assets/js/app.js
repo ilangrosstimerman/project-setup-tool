@@ -25,7 +25,7 @@ var creationSuccess = function (data) {
 };
 
 var newCard = {
-  name: 'New Test Card',
+  name: 'Hello beautiful',
   desc: 'This is the description of our new card.',
   // Place this card at the top of our list
   idList: myList,
@@ -33,3 +33,6 @@ var newCard = {
 };
 
 window.Trello.post('/cards/', newCard, creationSuccess);
+
+var id = window.Trello.card.getId();
+alert(id);
