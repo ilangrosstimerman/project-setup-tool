@@ -12,7 +12,7 @@ Simply add the contact information and a small message about your meeting into t
 
 
 ## Deployment 
-You can find our deployed project here: ()
+You can find our deployed project here: ()  
 You can find the Repostitory here: ()
 
 ## Authors
