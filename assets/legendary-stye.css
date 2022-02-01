@@ -1,7 +1,7 @@
 body {
   background-color: rgb(255, 255, 255);
-  margin-left: 650px;
-  margin-right: 650px;
+  width: 30%;
+  margin: auto;
   
 }
 
@@ -36,11 +36,12 @@ label{
 
 }
 .form-fieldset-container{
-  display: block;
-  border-style: solid;
-  justify-content: center;
-  border-width: 20px;
-  border-color: rgb(74, 132, 240);
-
+    justify-content: center;
+    background-color: mintcream;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    border: 20px rgb(36, 90, 189) solid;
   
 }
