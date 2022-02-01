@@ -1,4 +1,4 @@
-# Legendary Journey
+# Social Invitation
 
 Here we have our group Project of a Calendar invite
 
@@ -11,14 +11,18 @@ This project shows a convenient way to schedule a meeting with someone. You can 
 Simply add the contact information and a small message about your meeting into the given boxes. You’ll next want to pick your meeting date. Click submit and the rest is taken care of for you with the code that’s been written.
 
 
+## Deployment 
+You can find our deployed project here: ()
+You can find the Repostitory here: ()
+
 ## Authors
 
 
-* Ilan Timerman  
-* Jeremy Anderson  
-* Nicholas Tatom  
-* Brandon Peterson  
-* Chelsie Mahoney  
+* Ilan Timerman  (https://github.com/ilantimerman)  
+* Jeremy Anderson  (https://github.com/jeremy0anderson)  
+* Nicholas Tatom  (https://github.com/tatomtech)  
+* Brandon Peterson  (https://github.com/Brandonpeterson6)  
+* Chelsie Mahoney  (https://github.com/CMahoney12)  
 
 
 ## Acknowledgments
@@ -28,3 +32,6 @@ Simply add the contact information and a small message about your meeting into t
 * 
 * 
 * 
+
+
+## Screenshots 
