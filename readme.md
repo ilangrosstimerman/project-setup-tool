@@ -12,8 +12,8 @@ Simply add the contact information and a small message about your meeting into t
 
 
 ## Deployment 
-You can find our deployed project here: ()  
-You can find the Repostitory here: ()
+You can find our deployed project here: (https://ilantimerman.github.io/legendary-journey/)  
+You can find the Repostitory here: (https://github.com/ilantimerman/legendary-journey)
 
 ## Authors
 
