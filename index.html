@@ -2,90 +2,153 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Legendary-Journey</title>
+  <title>Project Setup Tool</title>
   <link rel="stylesheet" href="./assets/legendary-stye.css"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <!-- Bulma Version 0.9.0-->
+    <link rel='stylesheet' href='https://unpkg.com/bulma@0.9.0/css/bulma.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.9.1/css/OverlayScrollbars.min.css'>
+    <link rel='stylesheet' href='https://kingsora.github.io/OverlayScrollbars/etc/os-theme-thin-dark.css'>	  
+    <link rel='stylesheet' href="../css/prism.css">
+    <link rel="stylesheet" href="../css/cheatsheet.css">
+    <script src="https://kit.fontawesome.com/7dc3015a44.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<div class="rendered-form">
-  <h1 contenteditable="false" id="control-7612822">Get In Touch</h1>
-</div>
-<dialog class="view-meeting-request-dialog" id="view-meeting" open>
-  <form class="edit-request-form" id="edit-request-form">
-    <fieldset class="edit-fields" id="edit-fields">
-      <div class="formbuilder-text form-group">
-        <label for="edit-name" class="formbuilder-text-label" hidden>Name</label>
-          <input disabled class="edit-card-input form-control" id="edit-name" placeholder=""/>
+  <section class="hero is-primary">
+    <div class="hero-body">
+      <div class="columns">
+        <div class="column is-12">
+          <div class="container content">
+            <h1 class="title">Project Setup Tool</h1>
+            <h3 class="subtitle">
+              Create a Trello board and a Github repo with the click of a button 
+            </h3>
+          </div>
+        </div>
       </div>
-      <div class="formbuilder-text form-group">
-        <label for="edit-phone" class="formbuilder-text-label" hidden>Phone</label>
-          <input disabled type="text" class="edit-card-input form-control" placeholder="" name="edit-phone"  id="edit-phone"/>
+    </div>
+  </section>
+  <section class="pt-6" id="buttons">
+    <div class="container pt-6">
+    <div class="columns is-mobile is-centered formbuilder-main form-container form main-form" id="main-form-container">
+      <div class="column is-one-quarter">
+          <button type="submit" class="button is-large is-rounded is-primary" id="trello-signin">Sign in with Trello</button>
       </div>
-      <div class="formbuilder-text form-group">
-        <label for="edit-email" class="formbuilder-text-label" hidden>Email</label>
-          <input disabled type="text" class="edit-card-input form-control" placeholder="" name="edit-email"  id="edit-email"/>
+      <div class="column is-one-quarter" id="fetch-boards">
+          <button type="submit" class="button is-large is-rounded is-primary" id="fetch-boards-btn">Display Trello Boards</button>
       </div>
-      <div class="formbuilder-text form-group">
-        <label for="edit-message" class="formbuilder-text-label" hidden>Message</label>
-          <input disabled type="text" class="edit-card-input form-control" placeholder="" name="edit-message"  id="edit-message"/>
+      <div class="column is-one-quarter" id="fetch-cards-btn">
+          <button type="submit" class="button is-large is-rounded is-primary" id="fetch-cards">Display Trello Cards</button>
       </div>
-      <div class="formbuilder-text form-group">
-        <label for="edit-date" class="formbuilder-text-label" hidden>Date</label>
-          <input disabled type="date" class="edit-card-input form-control" placeholder="" name="edit-date"  id="edit-date"/>
+      <div class="column is-one-quarter">
+          <button type="submit" class="button is-large is-rounded is-primary" id="github-signin">Sign in with Github</button>
       </div>
-    </fieldset>
-    <fieldset class="edit-fields" id="edit-fields-btn-containers">
-      <div class="edit-request-button-container field-button">
-        <button formaction="edit" type="button" form="edit-request-form" class="btn-default btn" id="submit-edit-btn">Submit Request</button>
-      </div>
-      <div class="edit-request-button-container field-button">
-        <button formaction="edit" type="button" form="edit-request-form" class="btn-default btn" id="edit-request-btn">Edit Request</button>
-      </div>
-      <div class="edit-request-button-container field-button">
-        <button type="button" form="edit-request-form" class="btn-default btn" id="close-dialog-btn">Close</button>
-      </div>
-    </fieldset>
-  </form>
-</dialog>
-<form class="form-container-main" id="request-form">
-  <label for="meeting-people-options" style="display: none">Selection</label>
-  <select class="member-select-dropdown" id="meeting-people-options">
-    <option class="schedule-option" id="default" selected >–Select a member to add to your workspace–</option>
-    <option class="schedule-option" id="ilan">Ilan</option>
-    <option class="schedule-option" id="jeremy">Jeremy</option>
-    <option class="schedule-option" id="nick">Nick</option>
-    <option class="schedule-option" id="chelsie">Chelsie</option>
-    <option class="schedule-option" id="brandon">Brandon</option>
-  </select>
-<fieldset class="form-fieldset-container">
-  <div class="formbuilder-text form-group field-text-1643251049905">
-    <label for="text-1643251049905" class="formbuilder-text-label">Name</label>
-    <input type="text" class="form-control" placeholder="Name" name="text-1643251049905"  id="text-1643251049905">
+    </div>
+    </div>
+  <div class="trello-board-container" id="fetch-boards-container">
   </div>
-  <div class="formbuilder-text form-group field-text-1643251062289">
-    <label for="text-1643251062289" class="formbuilder-text-label">Phone Number</label>
-    <input type="text" class="form-control" placeholder="Phone" name="text-1643251062289"  id="text-1643251062289">
+  <div class="trello-cards-container" id="fetch-cards-container">
   </div>
-  <div class="formbuilder-text form-group field-text-1643251064078">
-    <label for="text-1643251064078" class="formbuilder-text-label">Email</label>
-    <input type="text" class="form-control" placeholder="Email" name="text-1643251064078"  id="text-1643251064078">
-  </div>
-  <div class="formbuilder-text form-group field-text-1643251065818">
-    <label for="text-1643251065818" class="formbuilder-text-label">Message</label>
-    <textarea inputmode="text" class="form-control" placeholder="Message" name="text-1643251065818"  id="text-1643251065818"></textarea>
-  </div>
-  <div class="formbuilder-date form-group field-date-1643251044760">
-    <label for="date-1643251044760" class="formbuilder-date-label">Date Field</label>
-    <input type="datetime-local" class="form-control" placeholder="Date" name="date-1643251044760"  id="date-1643251044760">
-  </div>
-</fieldset>
-  <div class="formbuilder-button form-group field-button">
-    <button type="button" class="btn-default btn" id="view-requests-btn">View Requests</button>
-  </div>
-  <div class="formbuilder-button form-group field-button">
-    <button type="button" class="btn-default btn" name="button-1643251037187" id="button-1643251037187">Submit</button>
-  </div>
-</form>
+  </section>
+
 </body>
+<footer class="footer">
+  <section class="section">
+    <div class="container is-centered has-text-centered" id="title">
+      <h4 class="title is-4 pb-1">Created by</h4>
+    </div>
+    <div class="container">
+      <div class="columns is-multiline">
+        <div class="column is-half">
+          <article class="notification media has-background-white">
+            <figure class="media-left">
+              <span class="icon">
+                <a href="https://github.com/ilantimerman"><i class="fab fa-lg fa-github"></i></a>
+              </span>
+            </figure>
+            <div class="media-content">
+              <div class="content">
+                <h1 class="title is-size-4">Ilan Timerman</h1>
+                <p class="is-size-5 subtitle">
+                 Team lead, backend, front-end 
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="column is-half">
+          <article class="notification has-background-white media">
+            <figure class="media-left">
+              <span class="icon has-text-info">
+                <a href="https://github.com/jeremy0anderson>"<i class="fab fa-lg fa-github"></i></a>
+              </span>
+            </figure>
+            <div class="media-content">
+              <div class="content">
+                <h1 class="title is-size-4">Jeremy Anderson</h1>
+                <p class="is-size-5 subtitle">
+                Backend, integrations
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="column is-one-third">
+          <article class="notification has-background-white media">
+            <figure class="media-left">
+              <span class="icon has-text-danger">
+                <a href="https://github.com/tatomtech"><i class="fab fa-lg fa-github"></i></a>
+              </span>
+            </figure>
+            <div class="media-content">
+              <div class="content">
+                <h1 class="title is-size-4">Nicholas Tatom</h1>
+                <p class="is-size-5 subtitle">
+                  Front-end
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="column is-one-third">
+          <article class="notification has-background-white media">
+            <figure class="media-left">
+              <span class="icon has-text-grey">
+                <a href="https://github.com/Brandonpeterson6"><i class="fab fa-lg fa-github"></i></a>
+              </span>
+            </figure>
+            <div class="media-content">
+              <div class="content">
+                <h1 class="title is-size-4">Brandon Peterson</h1>
+                <p class="is-size-5 subtitle">
+                  Front-end
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="column is-one-third">
+          <article class="notification has-background-white media">
+            <figure class="media-left">
+              <span class="icon has-text-primary">
+                <a href="https://github.com/CMahoney12"><i class="fab fa-lg fa-github"></i></a>
+              </span>
+            </figure>
+            <div class="media-content">
+              <div class="content">
+                <h1 class="title is-size-4">Chelsie Mahoney</h1>
+                <p class="is-size-5 subtitle">
+                  Front-end
+                </p>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+  </footer>
+
 <script src="https://p.trellocdn.com/embed.min.js"></script>
 <!--Trello API script via Client.JS-->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
