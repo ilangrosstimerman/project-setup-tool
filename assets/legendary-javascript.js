@@ -27,38 +27,20 @@ class T{
           this.response = await this.call;
           for (let i = 0; i < this.response.length; i++) {
                console.log(this.call[i].id);
-               this. b = await TrelloBoards.create(this.response[i].id, document.querySelector('#fetch-boards-container'),{key:Trello.key(),token:Trello.token()});
-               return this.b;
+               TrelloBoards.create(this.call[i].id, document.querySelector("#fetch-boards-container"));
           }
      }
      static async parseCards() {
           this.call = await Trello.get('/members/me/cards/');
           this.response = await this.call;
-          for (let ii = 0; ii < this.response.length; ii++){
-               console.log(this.response[ii]);
-               TrelloCards.create(this.response[ii].id, document.querySelector("#fetch-cards-container"));
+          for (let i = 0; i < this.response.length; i++) {
+               console.log(this.call[i].id);
+               TrelloCards.create(this.call[i].id, document.querySelector("#fetch-cards-container"));
           }
      }
 }
 class G{}
-class Tr{
-     static async parseBoards() {
-          this.call = await Trello.get('/members/me/boards/');
-          this.response = await this.call;
-          for (let i = 0; i < this.response.length; i++) {
-               console.log(this.call[i].id);
-               TrelloBoards.create(this.call[i].id, document.body);
-          }
-     }
-     static async parseCards() {
-          this.call = await Trello.get('/members/me/cards/');
-          this.response = await this.call;
-          for (let i = 0; i < this.response.length; i++) {
-               console.log(this.call[i].id);
-               TrelloCards.create(this.call[i].id, document.body);
-          }
-     }
-}
+
 tSignin.addEventListener('click', async () =>{
      let a = await T.auth();
      tSignin.textContent = "Signed in";

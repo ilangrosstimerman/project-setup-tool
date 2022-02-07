@@ -131,4 +131,15 @@ footer #title {
     padding-bottom: 20px;
 }
 
-iframe
+.trello-board{
+    background-color: lightgray;
+    margin: 5px;
+    float: left;
+}
+.trello-card{
+    float: right;
+    display: inline-block;
+}
+.trello-components-container{
+    display: flex;
+}
