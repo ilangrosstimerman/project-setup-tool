@@ -17,6 +17,9 @@
     <bower-package value="" />
     <bower.json value="" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="24MwCwZWyDVAvzNwbOGvybG003Z" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -48,6 +51,7 @@
       <option name="presentableId" value="Default" />
       <updated>1643453639208</updated>
       <workItem from="1643453640700" duration="5291000" />
+      <workItem from="1644189527926" duration="2880000" />
     </task>
     <servers />
   </component>
